@@ -1,0 +1,19 @@
+@mixin wrapper {
+  .wrapper {
+    max-width: 1140px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &__inner {
+      @include wrapper__inner;
+    }
+  }
+}
+
+@mixin wrapper__inner {
+  display: -webkit-box;
+  display: flex;
+}

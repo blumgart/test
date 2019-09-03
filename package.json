@@ -1,0 +1,38 @@
+{
+  "name": "serptop_clean_template",
+  "version": "1.2.3",
+  "description": "npm install",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Blumgart",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.24.4",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-base64": "^0.1.3",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.2.3",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "lost": "^8.2.1",
+    "slack-notify": "^0.1.6"
+  },
+  "dependencies": {
+    "doiuse": "^4.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://blumgart@bitbucket.org/serptop/clean-template.git"
+  },
+  "homepage": "https://bitbucket.org/serptop/clean-template#readme"
+}

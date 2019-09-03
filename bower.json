@@ -1,0 +1,24 @@
+{
+  "name": "serptop_clean_template",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Alex Blumgart"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/assets/vendor",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^4",
+    "animate.css": "^3.5.2",
+    "bourbon": "^4.3.4"
+  }
+}

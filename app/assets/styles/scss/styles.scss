@@ -1,0 +1,40 @@
+@import "../../vendor/bourbon/app/assets/stylesheets/bourbon";
+
+@import "mixins/_section";
+@import "mixins/_wrapper";
+@import "mixins/_grid";
+@import "mixins/_sprite";
+@import "mixins/_utils";
+
+$fonts: ('');
+
+@for $i from 1 through length($fonts) {
+  @include font-face(nth($fonts, $i), "../../fonts/.../" + nth($fonts, $i) + "/" + nth($fonts, $i), $file-formats: eot ttf woff);
+}
+
+@include section(20px);
+@include wrapper;
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 640px) {
+
+}
+
+@media screen and (max-width: 576px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
+}

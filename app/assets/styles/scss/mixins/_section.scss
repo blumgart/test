@@ -1,0 +1,33 @@
+@mixin section($gutter) {
+  $sizes: (xs, sm, md, lg, xl);
+
+  .section {
+    position: relative;
+
+    &--inner {
+      &.section {
+        @each $size in $sizes {
+          $i: index($sizes, $size);
+          &--#{$size} {
+            padding: $gutter * $i 0;
+          }
+        }
+      }
+    }
+
+    &--outer {
+      &.section {
+        @each $size in $sizes {
+          $i: index($sizes, $size);
+          &--#{$size} {
+            margin: $gutter * $i 0;
+          }
+        }
+      }
+    }
+
+    &--overflow {
+      overflow: hidden;
+    }
+  }
+}

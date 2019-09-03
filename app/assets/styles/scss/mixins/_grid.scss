@@ -1,0 +1,67 @@
+@mixin grid($height, $gutter, $offset: false) {
+
+  @if $gutter {
+    &[data-grid-gutter="#{$gutter}"] {
+      max-width: calc(100% - #{$gutter + 'px'});
+      width: 100%;
+      margin-left: #{$gutter + 'px'};
+      margin-right: #{$gutter + 'px'};
+
+      .grid-item {
+        @for $i from 1 through 12 {
+          $w: (100% / 12) * $i;
+          $h: ($height / 12) * $i;
+
+          &--w-#{$i}-12 {
+            max-width: calc(#{$w} - #{$gutter + 'px'});
+          }
+
+          &--h-#{$i}-12 {
+            min-height: #{$h - $gutter + 'px'};
+          }
+        }
+
+        @if $offset {
+          @for $i from 1 through 12 {
+            $w: (100% / 12) * $i;
+            $h: ($height / 12) * $i;
+
+            &--w-offset-#{$i}-12 {
+              margin-left: #{$w};
+            }
+
+            &--h-offset-#{$i}-12 {
+              margin-top: #{$h + 'px'};
+            }
+          }
+        }
+      }
+    }
+
+  } @else {
+
+    &-item {
+      @for $i from 1 through 12 {
+        $w: (100% / 12) * $i;
+        $h: ($height / 12) * $i;
+
+        &--w-#{$i}-12 {
+          max-width: #{$w};
+        }
+
+        &--h-#{$i}-12 {
+          min-height: #{$h};
+        }
+
+        &--w-offset-#{$i}-12 {
+          margin-left: #{$w};
+        }
+
+        &--h-offset-#{$i}-12 {
+          margin-top: #{$h};
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,13 @@
+@mixin sprite($count, $selector) {
+  $sprites_width: 100%;
+
+  @for $i from 1 through $count {
+    $sprite_width: $sprites_width / ($count - 1) * ($i - 1);
+
+    &:nth-child(#{$i}) {
+      #{$selector} {
+        background-position: $sprite_width 0;
+      }
+    }
+  }
+}
